@@ -18,18 +18,25 @@ Route::resource('login', 'Login');
 
 Route::resource('logout', 'Login');
 
-Route::namespace('FDFUser')->middleware('localization')->group(function(){
+Route::namespace('FDFUser')->middleware('localization')->group(function()
+{
     Route::resource('/', 'Index');
     //Dat hang thi dung middleware checkLogin, phai dang nhap moi dat hang duoc
-});
+    Route::resource('categories', 'Categories');
 
-Route::namespace('FDFAdmin')->group(function(){
-    Route::group(['middleware' => 'checkAdminLogin'], function(){
+    Route::resource('product-detail', 'Products');
+
+});
+Route::namespace('FDFAdmin')->group(function()
+{
+    Route::group(['middleware' => 'checkAdminLogin'], function ()
+    {
         Route::resource('admin', 'Index');
     });
 });
 
-Route::namespace('Lang')->group(function (){
+Route::namespace('Lang')->group(function ()
+{
     Route::post('/lang', [
         'as' => 'switchLang',
         'uses' => 'LangController@postLang',
