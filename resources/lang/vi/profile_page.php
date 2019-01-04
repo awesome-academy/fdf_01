@@ -1,0 +1,32 @@
+<?php
+
+return [
+    'name' => 'Tên:',
+    'email' => 'Email:',
+    'phone' => 'SĐT:',
+    'gender' => 'Giới tính:',
+    'address' => 'Địa chỉ:',
+    'gender_male' => 'Nam',
+    'gender_female' => 'Nữ',
+    'info' => 'Thông tin',
+    'place_email' => 'Nhập email',
+    'password' => 'Mật khẩu',
+    'place_pass' => 'Nhập mật khẩu',
+    'edit' => 'Sữa',
+    'reset' => 'Nhập lại',
+    'close' => 'Đóng',
+    'password_again' => 'Nhập lại password',
+    'update_profile' => 'Cập nhật hồ sơ',
+    'his_order' => 'Lích sử đặt hàng',
+    'edit_profile' => 'Edit profile',
+    'his_card' => 'My history card',
+    'id_his' => 'ID',
+    'name_product' => 'Tên sản phẩm',
+    'image_product' => 'Hình ảnh',
+    'quantity' => 'số lương',
+    'date' => 'Ngày',
+    'update_success' => 'Cập nhật thành công',
+    'update_fail' => 'Cập nhật thất bại',
+    'upload_file' => 'Bạn chỉ được thêm ảnh',
+
+];
