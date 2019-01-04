@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [
+    'uses' => 'FDFUser\IndexController@getIndex',
+    'as' => 'home-page'
+]);
+
+Route::namespace('Lang')->group(function (){
+
+    Route::post('/lang', [
+    	'as' => 'switchLang',
+    	'uses' => 'LangController@postLang',
+    ])->middleware('localization');
+
 });

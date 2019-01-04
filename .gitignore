@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/svg
+/public/source/*.html
 /storage/*.key
 /storage
 /vendor
