@@ -3,6 +3,12 @@
 /public/storage
 /public/svg
 /public/source/*.html
+/public/layouts/admin/*.html
+/public/layouts/admin/bower_components/flot
+/public/layouts/admin/bower_components/flot.tooltip
+/public/layouts/admin/bower_components/mocha
+/public/layouts/admin/bower_components/morrisjs
+/public/layouts/admin/bower_components/raphael
 /storage/*.key
 /storage
 /vendor
