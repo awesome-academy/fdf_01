@@ -6,10 +6,11 @@ return [
         'en' => 'English',
         'vi' => 'Tiếng Việt',
     ],
+    'title' => 'Cửa hàng đồ ăn và nước uống',
     'login' => 'Đăng nhập',
     'logout' => 'Đăng xuất',
     'address' => '16 Lý Thường Kiệt - Đà Nẵng - Việt Nam',
-    'account' => 'Tài khoản',
+    'account' => 'Xin chào, ',
     'register' => 'Đăng ký',
     'cart' => 'Giỏ hàng (trống)',
     'checkout' => 'Đặt hàng',
@@ -19,5 +20,6 @@ return [
     'products' => 'Sản phẩm',
     'about_us' => 'Giới thiệu',
     'contact' => 'Liên hệ',
+    'setting' => 'Tài khoản',
 
 ];

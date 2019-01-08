@@ -11,28 +11,27 @@
 |
 */
 
-Route::pattern('id','[0-9]*');
-Route::pattern('slug','(.*)');
+Route::pattern('id', '[0-9]*');
+Route::pattern('slug', '(.*)');
 
-Route::namespace('FDFUser')->group(function(){
-	Route::get('/',[
-		'uses' => 'IndexController@getIndex',
-		'as' => 'home-page'
-	]);
+Route::resource('login', 'Login');
+
+Route::resource('logout', 'Login');
+
+Route::namespace('FDFUser')->middleware('localization')->group(function(){
+    Route::resource('/', 'Index');
+    //Dat hang thi dung middleware checkLogin, phai dang nhap moi dat hang duoc
 });
 
-Route::namespace('FDFAdmin')->prefix('admin')->group(function(){
-	Route::get('/',[
-		'uses' => 'IndexController@getIndex',
-		'as' => 'admin-page'
-	]);
+Route::namespace('FDFAdmin')->group(function(){
+    Route::group(['middleware' => 'checkAdminLogin'], function(){
+        Route::resource('admin', 'Index');
+    });
 });
 
 Route::namespace('Lang')->group(function (){
-
     Route::post('/lang', [
-    	'as' => 'switchLang',
-    	'uses' => 'LangController@postLang',
+        'as' => 'switchLang',
+        'uses' => 'LangController@postLang',
     ])->middleware('localization');
-
 });

@@ -15,12 +15,12 @@ return [
 
     'failed' => 'These credentials do not match our records.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'login' => 'Login',
-    'email' => 'Email address*',
-    'password' => 'Password*',
-    'login_failed' => 'Email or Password is invalid',
-    'email_required' => 'Please input your email',
-    'password_required' => 'Please input your password',
-    'whoops' => 'Whoops! Looks like something went wrong!',
+    'login' => 'Đăng nhập',
+    'email' => 'Địa chỉ email*',
+    'password' => 'Mật khẩu*',
+    'login_failed' => 'Địa chỉ email hoặc mật khẩu không đúng',
+    'email_required' => 'Bạn phải nhập địa chỉ email',
+    'password_required' => 'Bạn phải nhập mật khẩu',
+    'whoops' => 'Có gì đó sai sai',
 
 ];

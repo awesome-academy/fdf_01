@@ -6,10 +6,11 @@ return [
         'en' => 'English',
         'vi' => 'Tiếng Việt',
     ],
+    'title' => 'Drink & Food',
     'login' => 'Login',
     'logout' => 'Logout',
     'address' => '16 Ly Thuong Kiet - Da Nang - VietNam',
-    'account' => 'Account',
+    'account' => 'Hello, ',
     'register' => 'Register',
     'cart' => 'Cart (empty)',
     'checkout' => 'Checkout',
@@ -19,5 +20,6 @@ return [
     'products' => 'Products',
     'about_us' => 'About us',
     'contact' => 'Contact',
+    'setting' => 'Setting',
 
 ];
