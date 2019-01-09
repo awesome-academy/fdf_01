@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -29,6 +29,18 @@ class User extends Authenticatable
     protected $table = "users";
     protected $primaryKey = "id";
     public $timestamps = true;
+
+    public function getGenderAttribute($gender)
+    {
+        if ($gender == config('setting.male'))
+        {
+
+            return trans('managing_user.male');
+        } else {
+            
+            return trans('managing_user.female');
+        }
+    }
 
     public function orders()
     {

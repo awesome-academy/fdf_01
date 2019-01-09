@@ -45,7 +45,7 @@ class Login extends Controller
         $password = $request->txtPassword;
         if(Auth::attempt(['email' => $email, 'password' => $password]))
         {
-            if(auth()->user()->role == config('setting.user'))
+            if(auth()->user()->role === config('setting.user'))
             {
 
                 return redirect()->route('index');
@@ -55,7 +55,7 @@ class Login extends Controller
             }
         } else {
             
-            return redirect()->route('login.index')->with('alert','Username or Password is invalid'); 
+            return redirect()->route('login.index')->with('alert', 'Username or Password is invalid'); 
         }
     }
 

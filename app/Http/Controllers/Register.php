@@ -50,10 +50,10 @@ class Register extends Controller
         if($checkSave)
         {
 
-            return redirect(route('login.index'))->with('alert',trans('register.register_done'));
+            return redirect(route('login.index'))->with('alert', trans('register.register_done'));
         } else {
 
-            return redirect(route('login.index'))->with('alert',trans('register.register_failed'));
+            return redirect(route('login.index'))->with('alert', trans('register.register_failed'));
         }    }
 
     /**

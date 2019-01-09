@@ -8,6 +8,7 @@ return [
     ],
     'login' => 'Login',
     'logout' => 'Logout',
+    'title' => 'Dink & Food',
     'address' => '16 Ly Thuong Kiet - Da Nang - VietNam',
     'account' => 'Account',
     'register' => 'Register',

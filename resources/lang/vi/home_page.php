@@ -8,6 +8,7 @@ return [
     ],
     'login' => 'Đăng nhập',
     'logout' => 'Đăng xuất',
+    'title' => 'Cửa hàng đồ ăn và thức uống',
     'address' => '16 Lý Thường Kiệt - Đà Nẵng - Việt Nam',
     'account' => 'Tài khoản',
     'register' => 'Đăng ký',
