@@ -26,6 +26,9 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    protected $table = "users";
+    protected $primaryKey = "id";
+
     public function orders()
     {
         return $this->hasMany(Order::class);

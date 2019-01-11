@@ -9,9 +9,17 @@
             </div>
             <div class="pull-right auto-width-right">
                 <ul class="top-details menu-beta l-inline">
-                    <li><a href="#"><i class="fa fa-user"></i> @lang('home_page.account') </a></li>
-                    <li><a href="#">@lang('home_page.register')</a></li>
-                    <li><a href="#">@lang('home_page.login')</a></li>
+                    @if(Auth::check())
+                        <li><a href="#"><i class="fa fa-user"></i> @lang('home_page.account') {{ Auth::user()->name }} </a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i> @lang('home_page.setting') </a></li>
+                        <li><a href="{{ route('logout.create') }}"> 
+                            <i class="fa fa-sign-out" aria-hidden="true"></i> 
+                            </i> @lang('home_page.logout') </a>
+                        </li>
+                    @else
+                        <li><a href="#">@lang('home_page.register')</a></li>
+                        <li><a href="{{ route('login.store') }}">@lang('home_page.login')</a></li>
+                    @endif
                     <li class="hidden-xs">
                         {!! Form::open(['method' => 'POST', 'route'=>['switchLang'], ]) !!}
                             {!! Form::select
