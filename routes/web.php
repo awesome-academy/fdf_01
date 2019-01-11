@@ -14,9 +14,12 @@
 Route::pattern('id', '[0-9]*');
 Route::pattern('slug', '(.*)');
 
-Route::resource('login', 'Login');
+Route::group(['middleware' => 'localization'], function(){ 
+    Route::resource('register', 'Register');
+    Route::resource('login', 'Login');
+    Route::resource('logout', 'Login');
+});
 
-Route::resource('logout', 'Login');
 
 Route::namespace('FDFUser')->middleware('localization')->group(function(){
     Route::resource('/', 'Index');

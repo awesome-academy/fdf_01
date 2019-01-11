@@ -28,6 +28,7 @@ class User extends Authenticatable
 
     protected $table = "users";
     protected $primaryKey = "id";
+    public $timestamps = true;
 
     public function orders()
     {
