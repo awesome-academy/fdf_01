@@ -798,7 +798,7 @@ strong {
 color:#000
 }
 
-input[type="text"],input[type="password"],input[type="email"],input[type="url"],textarea {
+input[type="text"],input[type="password"],input[type="select"],input[type="email"],input[type="url"],textarea {
 width:100%;
 border:1px solid #e1e1e1;
 height:37px;
@@ -881,7 +881,6 @@ font-size:10px
 
 select {
 box-shadow:none;
-border:1px solid #e1e1e1;
 cursor:pointer;
 width:100%
 }
