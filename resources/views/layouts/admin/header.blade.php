@@ -25,10 +25,10 @@
     </li>
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            @lang('home_page.account') {{ Auth::user()->name }} <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+             {{ Auth::user()->name }} <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
         </a>
         <ul class="dropdown-menu dropdown-user">
-            <li><a href="#"><i class="fa fa-user fa-fw"></i> @lang('admin_page.profile') </a>
+            <li><a href="{{ route('admin.index') }}"><i class="fa fa-user fa-fw"></i> @lang('admin_page.profile') </a>
             </li>
             <li><a href="#"><i class="fa fa-gear fa-fw"></i> @lang('admin_page.setting') </a>
             </li>
