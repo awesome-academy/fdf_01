@@ -7,7 +7,9 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Product;
 
-class Index extends Controller
+use App\Models\Category;
+
+class Categories extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +18,7 @@ class Index extends Controller
      */
     public function index()
     {
-        $drinks = Product:: where('categories_id', '1')->orderBy('id', 'DESC')->paginate(@config('settings.paginate_eight'));
-        $foods = Product:: where('categories_id', '2')->orderby('id', 'DESC')->paginate(@config('settings.paginate_eight'));
-
-        return view('fdfuser.index.index', compact('drinks', 'foods'));
+        //
     }
 
     /**
@@ -51,7 +50,12 @@ class Index extends Controller
      */
     public function show($id)
     {
-        //
+        $typeProduct = Product:: where('categories_id', $id) -> paginate(@config('settings.paginate_eight'));
+        $otherProduct = Product:: where('categories_id', '<>', $id) -> paginate(@config('settings.paginate_three'));
+        $categories = Category:: where('parent_id', $id)->get();
+        $cate_product = Category:: where('id', $id) -> first();
+
+        return view('fdfuser.category.index',compact('typeProduct', 'otherProduct', 'categories', 'cate_product'));
     }
 
     /**

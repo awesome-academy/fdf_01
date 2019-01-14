@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->double('price');
             $table->boolean('status');
             $table->integer('quantity');
+            $table->string('avatar');
             $table->integer('categories_id')->unsigned();
             $table->timestamps();
         });

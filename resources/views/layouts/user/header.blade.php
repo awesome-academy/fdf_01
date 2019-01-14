@@ -21,7 +21,7 @@
                         <li><a href="{{ route('login.store') }}">@lang('home_page.login')</a></li>
                     @endif
                     <li class="hidden-xs">
-                        {!! Form::open(['method' => 'POST', 'route'=>['switchLang'], ]) !!}
+                        {!! Form::open(['method' => 'POST', 'route'=>['switchLang'] ]) !!}
                             {!! Form::select
                                 (
                                     'locale',
@@ -117,12 +117,14 @@
             <div class="visible-xs clearfix"></div>
             <nav class="main-menu">
                 <ul class="l-inline ov">
-                    <li><a href="index.html"> @lang('home_page.home_page') </a></li>
-                    <li><a href="#"> @lang('home_page.products') </a>
+                    <li><a href="{!! route('index') !!}"> @lang('home_page.home_page') </a></li>
+                    <li><a> @lang('home_page.products') </a>
                         <ul class="sub-menu">
-                            <li><a href="product_type.html">Sản phẩm 1</a></li>
-                            <li><a href="product_type.html">Sản phẩm 2</a></li>
-                            <li><a href="product_type.html">Sản phẩm 4</a></li>
+                            @foreach($product_type as $type)
+                                @if($type->parent_id == @config('settings.parent_type') )
+                                    <li><a href="{!! route('categories.show',$type ->id) !!}">{!! $type -> name !!}</a></li>
+                                @endif
+                            @endforeach
                         </ul>
                     </li>
                     <li><a href="about.html"> @lang('home_page.about_us') </a></li>
