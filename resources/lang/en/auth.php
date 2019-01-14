@@ -22,5 +22,11 @@ return [
     'email_required' => 'Please input your email',
     'password_required' => 'Please input your password',
     'whoops' => 'Whoops! Looks like something went wrong!',
+    'login_or' => 'Login or',
+    'sign_up' => 'Sign up',
+    'facebook' => 'Facebook',
+    'google' => 'Google+',
+    'twitter' => 'Twitter',
+    'or' => 'Or'
 
 ];

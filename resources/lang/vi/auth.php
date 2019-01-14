@@ -22,5 +22,11 @@ return [
     'email_required' => 'Bạn phải nhập địa chỉ email',
     'password_required' => 'Bạn phải nhập mật khẩu',
     'whoops' => 'Có gì đó sai sai',
+    'login_or' => 'Đăng nhập hoặc',
+    'sign_up' => 'Đăng ký',
+    'facebook' => 'Facebook',
+    'google' => 'Google+',
+    'twitter' => 'Twitter',
+    'or' => 'Hoặc'
 
 ];

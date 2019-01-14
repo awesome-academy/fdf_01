@@ -20,6 +20,8 @@ Route::group(['middleware' => 'localization'], function(){
     Route::resource('logout', 'Login');
 });
 
+Route::get('/redirect/{social}', 'SocialAuthController@redirect');
+Route::get('/callback/{social}', 'SocialAuthController@callback');
 
 Route::namespace('FDFUser')->middleware('localization')->group(function()
 {
