@@ -35,7 +35,10 @@
                 <a href="#"><i class="fa fa-users fa-fw"></i> @lang('admin_page.managing_user')<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">@lang('admin_page.list_user')</a>
+                        <a href="{{ route('managing-user.index') }}">@lang('admin_page.list_user')</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('managing-user.create') }}">@lang('admin_page.user_add')</a>
                     </li>
                 </ul>
             </li>

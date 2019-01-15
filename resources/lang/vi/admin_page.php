@@ -17,6 +17,10 @@ return [
     'profile' => 'Thông tin cá nhân',
     'login' => 'Đăng nhập',
     'logout' => 'Đăng xuất',
-    'setting' => 'Cài đặt'
+    'setting' => 'Cài đặt',
+    'delete_success' => 'Xóa thành công',
+    'delete_fail' => 'Xóa thất bại',
+    'confirm_delete' => 'Bạn có chắc bạn muốn xóa không?',
+    'user_add' => 'Thêm người dùng',
 
 ];

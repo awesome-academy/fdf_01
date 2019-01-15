@@ -17,3 +17,9 @@
     	alert("{{ session('alert') }}");
     </script>
 @endif
+
+@if (session('msgDelete'))
+    <script type="text/javascript" charset="utf-8">
+        alert("{{ session('msgDelete') }}");
+    </script>
+@endif
