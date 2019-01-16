@@ -2,6 +2,7 @@
 
 return [
 
+    'title' => 'Admin - Food & Drink',
     'dashboard' => 'Dashboard',
     'managing_cat' => 'Managing categories',
     'list_cat' => 'List category',

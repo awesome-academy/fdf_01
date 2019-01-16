@@ -6,3 +6,9 @@ $('[data-confirm]').on('click', function (e) {
         e.stopImmediatePropagation();
     }
 });
+
+function mark(notificationCount){
+    if(notificationCount != config('setting.default')) {
+        $.get('/mark');
+    }
+}

@@ -2,6 +2,7 @@
 
 return [
 
+    'title' => 'Admin - Food & Drink',
     'dashboard' => 'Bảng điều khiển',
     'managing_cat' => 'Quản lý danh mục',
     'list_cat' => 'Danh sách danh mục',

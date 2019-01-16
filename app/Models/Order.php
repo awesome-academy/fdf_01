@@ -14,7 +14,25 @@ class Order extends Model
         'total_payment',
     ];
 
-    public $timestamps = false;
+    public $timestamps = true;
+
+    public function getStatusAttribute($status)
+    {
+        if ($status == config('setting.not_progress'))
+        {
+
+            return trans('order.not_progress');
+        } else if($status == config('setting.in_delivery')) {
+            
+            return trans('order.in_delivery');
+        } else if($status == config('setting.processed')) {
+
+            return trans('order.processed');
+        } else {
+
+            return trans('order.reject');
+        }
+    }
 
     public function user()
     {
@@ -30,4 +48,5 @@ class Order extends Model
     {
         return $this->hasMany(DetailOrder::class);
     }
+
 }

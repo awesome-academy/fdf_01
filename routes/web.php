@@ -50,6 +50,8 @@ Route::namespace('FDFAdmin')->middleware('localization')->group(function()
 
         Route::resource('managing-product', 'ManagingProduct');
 
+        Route::resource('managing-order', 'ManagingOrder');
+
         Route::post('update-status',[
             'uses' => 'ManagingProduct@updateStatus',
         ]);
@@ -62,6 +64,10 @@ Route::namespace('Lang')->group(function ()
         'as' => 'switchLang',
         'uses' => 'LangController@postLang',
     ])->middleware('localization');
+});
+
+Route::get('/mark', function(){
+    Auth()->user()->unreadNotifications->markAsRead();
 });
 
 Route::get('desSS', function () {

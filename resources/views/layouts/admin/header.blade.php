@@ -1,20 +1,45 @@
 <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">@lang('admin_page.dashboard')</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.html">Admin - Food & Drink</a>
+    <a class="navbar-brand" href="index.html">@lang('admin_page.title')</a>
 </div>
-
+<div class="dropdown style-dropdown">
+    <a href="#" onclick="return mark({{ count(Auth()->user()->unreadNotifications)}})" role="button" data-toggle="dropdown" id="dropdownMenu1" data-target="#" class="style-onclick-a" aria-expanded="true">
+        <i class="fa fa-bell-o style-font">
+        </i>
+    </a>
+    <span class="badge badge-danger">{{ count(Auth()->user()->unreadNotifications)}}</span>
+    <ul class="dropdown-menu dropdown-menu-left pull-right" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation">
+            <a href="#" class="dropdown-menu-header">@lang('order.notification')</a>
+        </li>
+        @foreach(Auth()->user()->Notifications as $notification)
+        <ul class="timeline timeline-icons timeline-sm style-timeline">
+            <li>
+                <p>
+                    @lang('order.order_new') {{$notification->data['user']['name']}} <a href="">Click để xem chi tiết</a>
+                    <span class="timeline-icon"><i class="fa fa-archive"></i></span>
+                    <span class="timeline-date">{{ $notification->created_at }}</span>
+                </p>
+            </li>
+        </ul>
+        @endforeach
+        <li role="presentation">
+            <a href="#" class="dropdown-menu-header"></a>
+        </li>
+    </ul>
+</div>
 <ul class="nav navbar-top-links navbar-right">
     <li>
         {!! Form::open(['method' => 'POST', 'route'=>['switchLang'] ]) !!}
             {!! Form::select
                 (
                     'locale',
-                    ['en' => trans('home_page.lang.en'), 
+                    ['en' => trans('home_page.lang.en'),
                      'vi' => trans('home_page.lang.vi')],
                       Lang::locale() === 'vi' ? 'vi' : 'en' ,
                     ['onchange'=>'this.form.submit()',
