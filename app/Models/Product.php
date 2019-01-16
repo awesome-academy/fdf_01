@@ -17,7 +17,7 @@ class Product extends Model
         'categories_id',
     ];
 
-    public $timestamps = false;
+    public $timestamps = true;
 
     public function detailOders()
     {

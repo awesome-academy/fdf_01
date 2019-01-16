@@ -47,10 +47,10 @@
                 <a href="#"><i class="fa fa-users fa-fw"></i> @lang('admin_page.managing_product')<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">@lang('admin_page.list_product')</a>
+                        <a href="{{ route('managing-product.index') }}">@lang('admin_page.list_product')</a>
                     </li>
                     <li>
-                        <a href="#">@lang('admin_page.add_product')</a>
+                        <a href="{{ route('managing-product.create') }}">@lang('admin_page.add_product')</a>
                     </li>
                 </ul>
             </li>

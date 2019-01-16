@@ -14,7 +14,6 @@
 Route::pattern('id', '[0-9]*');
 Route::pattern('slug', '(.*)');
 
-
 Route::group(['middleware' => 'localization'], function(){
     
     Route::resource('register', 'Register');
@@ -43,6 +42,12 @@ Route::namespace('FDFAdmin')->middleware('localization')->group(function(){
         Route::resource('admin', 'Index');
 
         Route::resource('managing-user', 'ManagingUser');
+
+        Route::resource('managing-product', 'ManagingProduct');
+
+        Route::post('update-status',[
+            'uses' => 'ManagingProduct@updateStatus',
+        ]);
     });
 });
 

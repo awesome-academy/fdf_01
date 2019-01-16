@@ -5,5 +5,7 @@ return [
     'admin' => 2,
     'male' => 1,
     'female' => 2,
+    'status_active' => 1,
+    'status_deactive' => 0,
     
 ];

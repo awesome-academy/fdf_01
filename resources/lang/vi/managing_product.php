@@ -1,0 +1,35 @@
+<?php
+
+return [
+
+    'id' => 'ID',
+    'name' => 'Tên sản phầm',
+    'description' => 'Mô tả',
+    'price' => 'Gía tiền',
+    'quantity' => 'Số lượng',
+    'avatar' => 'Hình ảnh',
+    'categories' => 'Danh mục',
+    'status' => 'Trạng thái',
+    'date_create' => 'Ngày tạo',
+    'delete' => 'Xóa',
+    'edit' => 'Sửa',
+    'product' => 'Sản phẩm',
+    'list' => 'Danh sách',
+    'add' => 'Thêm mới',
+    'edit' => 'Chỉnh sửa',
+    'reset' => 'Đặt lại',
+    'add_successful' => 'Thêm thành công',
+    'add_fail' => 'Thêm thất bại',
+    'edit_successful' => 'Sửa thành công',
+    'edit_fail' => 'Sửa thất bại',
+    'display' => 'Hiển thị trên trang',
+    'non-display' => 'Không hiển thị trên trang',
+    'errors' => 'Có lỗi xảy ra',
+    'name_required' => 'Xin hãy nhập tên sản phẩm',
+    'description_required' => 'Xin hãy nhập mô tả',
+    'price_required' => 'Xin hãy nhập gía',
+    'price_digits' => 'Nhập gía từ 4 đến 7 chữ số',
+    'qty_required' => 'Xin hãy nhập số lượng',
+    'qty_digits' => 'Nhập số lượng không đúng',
+
+];
