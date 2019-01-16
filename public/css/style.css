@@ -8,3 +8,27 @@
     height: 100px;
     width: 150px;
 }
+
+.img-product {
+    height: 250px;
+}
+
+.img-product-two {
+    width: 25%;
+}
+
+.header-style {
+    background-color: #0277b8;
+}
+
+.pay-method-one {
+    display: block;
+}
+
+.pay-method-two {
+    display: none;
+}
+
+.order-head {
+    padding: 0px 10px;
+}

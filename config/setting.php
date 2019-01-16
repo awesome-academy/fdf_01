@@ -7,5 +7,6 @@ return [
     'female' => 2,
     'status_active' => 1,
     'status_deactive' => 0,
+    'quantity' => 1,
     
 ];
