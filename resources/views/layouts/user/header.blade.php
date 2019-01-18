@@ -10,8 +10,7 @@
             <div class="pull-right auto-width-right">
                 <ul class="top-details menu-beta l-inline">
                     @if(Auth::check())
-                        <li><a href="#"><i class="fa fa-user"></i> @lang('home_page.account') {{ Auth::user()->name }} </a></li>
-                        <li><a href="#"><i class="fa fa-cog"></i> @lang('home_page.setting') </a></li>
+                        <li><a href="{!! route('profile.show', Auth::user()->id) !!}"><i class="fa fa-user"></i>{{ Auth::user()->name }} </a></li>
                         <li><a href="{{ route('logout.create') }}">
                             <i class="fa fa-sign-out" aria-hidden="true"></i>
                             </i> @lang('home_page.logout') </a>

@@ -11,9 +11,9 @@ class History extends Model
     protected $fillable = [
         'order_id',
         'user_id',
+        'create_at'
     ];
 
-    public $timestamps = false;
 
     public function user()
     {
