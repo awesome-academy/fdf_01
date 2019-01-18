@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Admin - Food & Drink</title>
 
     {{ Html::style(asset('/layouts/admin/bower_components/bootstrap/dist/css/bootstrap.min.css')) }}
@@ -14,6 +15,7 @@
     {{ Html::style(asset('/layouts/admin/bower_components/font-awesome/css/font-awesome.min.css')) }}
     {{ Html::style(asset('/layouts/admin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css')) }}
     {{ Html::style(asset('/layouts/admin/bower_components/datatables-responsive/css/dataTables.responsive.css')) }}
+
 </head>
 
 <body>
@@ -33,6 +35,8 @@
     {{ Html::script(asset('/layouts/admin/bower_components/datatables/media/js/jquery.dataTables.min.js')) }}
     {{ Html::script(asset('/layouts/admin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js')) }}
     {{ Html::script(asset('/js/confirm.js')) }}
+    {{ Html::script(asset('/js/ajax/productStatus.js')) }}
+    {{ Html::script('messages.js') }}
 
     <script>
     $(document).ready(function() {

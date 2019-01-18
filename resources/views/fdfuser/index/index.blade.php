@@ -37,7 +37,7 @@
                     <div class="beta-products-list">
                         <h4>@lang('home_page.drinks')</h4>
                         <div class="beta-products-details">
-                            <p class="pull-left">{!! count($drinks)!!} &nbsp&nbsp@lang('homepage.products')</p>
+                            <p class="pull-left">{!! count($drinks)!!} @lang('home_page.products')</p>
                             <div class="clearfix"></div>
                         </div>
 
@@ -46,7 +46,7 @@
                                 <div class="col-sm-3">
                                 <div class="single-item">
                                     <div class="single-item-header">
-                                        <a href="{!! route('product-detail.show',$dr->id) !!}"><img src="/source/image/product/{!! $dr->avatar  !!}" alt="" height="250px"></a>
+                                        <a href="{!! route('product-detail.show',$dr->id) !!}"><img src="/images/product/avatar/{!! $dr->avatar  !!}"></a>
                                     </div>
                                     <div class="single-item-body">
                                         <p class="single-item-title">{!! $dr->name !!}</p>
@@ -79,7 +79,7 @@
                                 <div class="col-sm-3">
                                 <div class="single-item">
                                     <div class="single-item-header">
-                                        <a href="{!! route('product-detail.show',$fd->id) !!}"><img src="/source/image/product/{!! $fd->avatar !!}" alt="" height="250px"></a>
+                                        <a href="{!! route('product-detail.show',$fd->id) !!}"><img src="/images/product/avatar/{!! $fd->avatar !!}"></a>
                                     </div>
                                     <div class="single-item-body">
                                         <p class="single-item-title">{!! $fd->name !!}</p>
@@ -100,7 +100,7 @@
                         <div class="space40">&nbsp;</div>
                     </div>
                 </div>
-            </div> 
+            </div>
 
         </div>
     </div>
