@@ -21,7 +21,6 @@ Route::group(['middleware' => 'localization'], function(){
     Route::resource('logout', 'Login');
 });
 
-
 Route::get('/redirect/{social}', 'SocialAuthController@redirect');
 Route::get('/callback/{social}', 'SocialAuthController@callback');
 
@@ -39,7 +38,7 @@ Route::namespace('FDFAdmin')->middleware('localization')->group(function(){
     
     Route::group(['middleware' => 'checkAdminLogin'], function(){
         
-        Route::resource('admin', 'Index');
+        Route::resource('admin', 'Profile');
 
         Route::resource('managing-user', 'ManagingUser');
 

@@ -7,4 +7,9 @@
 .img-avatar-index {
     height: 100px;
     width: 150px;
+    display: block;
+}
+
+.style-admin {
+    padding-bottom:120px;
 }
