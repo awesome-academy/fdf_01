@@ -16,6 +16,7 @@
     {{ Html::style(asset('/source/assets/dest/css/huong-style.css')) }}
     {{ Html::style(asset('/css/login.css')) }}
     {{ Html::style(asset('/css/history.css')) }}
+    {{ Html::style(asset('/css/style.css')) }}
 </head>
 <body>
 

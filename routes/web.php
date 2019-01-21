@@ -27,13 +27,17 @@ Route::get('/callback/{social}', 'SocialAuthController@callback');
 Route::namespace('FDFUser')->middleware('localization')->group(function(){
 
     Route::resource('/', 'Index');
-    //Dat hang thi dung middleware checkLogin, phai dang nhap moi dat hang duoc
+
     Route::resource('categories', 'Categories');
 
     Route::resource('product-detail', 'Products');
 
     Route::resource('profile', 'Profile');
 
+    Route::group(['middleware' => 'checkLogin'], function(){
+
+        Route::resource('cart', 'ShoppingCart');
+    });
 });
 
 Route::namespace('FDFAdmin')->middleware('localization')->group(function()
@@ -58,4 +62,8 @@ Route::namespace('Lang')->group(function ()
         'as' => 'switchLang',
         'uses' => 'LangController@postLang',
     ])->middleware('localization');
+});
+
+Route::get('desSS', function () {
+    Session::flush();
 });

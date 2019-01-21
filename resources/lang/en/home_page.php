@@ -12,7 +12,8 @@ return [
     'address' => '16 Ly Thuong Kiet - Da Nang - VietNam',
     'account' => 'Account',
     'register' => 'Register',
-    'cart' => 'Cart (empty)',
+    'cart' => 'Cart',
+    'empty' => 'Empty',
     'checkout' => 'Checkout',
     'input_search' => 'Searching....',
     'menu' => 'Menu',
@@ -31,5 +32,6 @@ return [
     'description' => 'Description',
     'reviews' => 'Reviews',
     'new_product' => 'New Products',
+    'fail' => 'Oops! Something went wrong',
 
 ];

@@ -3,8 +3,10 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use Illuminate\Support\Facades\Request;
 use App\Models\Category;
+use App\Models\Product;
+use Cart;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,9 +17,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('layouts.user.header',function($view){
+        view()->composer('layouts.user.header', function($view){
             $product_type = Category:: where('parent_id', '=', 0)->get();
-            $view -> with("product_type", $product_type);
+            $view->with("product_type", $product_type);
         });
     }
 

@@ -12,7 +12,8 @@ return [
     'address' => '16 Lý Thường Kiệt - Đà Nẵng - Việt Nam',
     'account' => 'Tài khoản',
     'register' => 'Đăng ký',
-    'cart' => 'Giỏ hàng (trống)',
+    'cart' => 'Giỏ hàng',
+    'empty' => 'Trống',
     'checkout' => 'Đặt hàng',
     'input_search' => 'Nhập từ khóa....',
     'menu' => 'Thực đơn',
@@ -30,5 +31,6 @@ return [
     'description' => 'Mô tả',
     'reviews' => 'Nhận xét',
     'new_product' => 'Sản phẩm mới',
+    'fail' => 'Có gì đó sai sai!',
 
 ];

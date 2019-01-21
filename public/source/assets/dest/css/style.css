@@ -1867,7 +1867,8 @@ font-size:13px
 ============================================================================= */
 
 .single-item {
-position:relative
+position:relative;
+margin-top: 20px;
 }
 
 .single-item-header {
