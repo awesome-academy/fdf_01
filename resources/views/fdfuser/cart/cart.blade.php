@@ -16,30 +16,25 @@
 
 <div class="container">
     <div id="content">
-
-        {!! Form::open(['method'=>'POST', 'class'=>'beta-form-checkout']) !!}
+        @include('common.errors')
+        {!! Form::open(['method'=>'POST', 'route'=>'cart.store', 'class'=>'beta-form-checkout']) !!}
             <div class="row">
                 <div class="col-sm-6">
                     <div class="space20">&nbsp;</div>
 
                     <div class="form-block">
                         {!! Form::label('name', trans('cart.fullname')) !!}
-                        {!! Form::text('txtName', '', ['placeholder'=>trans('cart.place_name'), 'required']) !!}
-                    </div>
-                    <div class="form-block">
-                        {!! Form::label('gender', trans('cart.gender')) !!}
-                        {!! Form::select('txtGender', [config('setting.male') => trans('cart.male'), config('setting.female') => trans('cart.female')], null, ['class'=>'form-control', 'id'=>'gender']) !!}
+                        {!! Form::text('txtName', Auth::user()->name, ['placeholder'=>trans('cart.place_name'), 'readonly']) !!}
                     </div>
 
                     <div class="form-block">
                         {!! Form::label('address', trans('cart.address')) !!}
-                        {!! Form::text('txtAddress', '', ['placeholder'=>trans('cart.place_address'), 'required']) !!}
+                        {!! Form::text('txtAddress', Auth::user()->address, ['placeholder'=>trans('cart.place_address'), 'readonly']) !!}
                     </div>
-
 
                     <div class="form-block">
                         {!! Form::label('phone', trans('cart.phone')) !!}
-                        {!! Form::text('txtPhone', '', ['placeholder'=>trans('cart.place_phone'), 'required']) !!}
+                        {!! Form::text('txtPhone', Auth::user()->phone_number, ['placeholder'=>trans('cart.place_phone'), 'readonly']) !!}
                     </div>
 
                     <div class="form-block">
@@ -102,7 +97,9 @@
                             </ul>
                         </div>
 
-                        <div class="text-center"><a class="beta-btn primary" href="#">@lang('cart.checkout') <i class="fa fa-chevron-right"></i></a></div>
+                        <div class="text-center">
+                            {!! Form::submit( trans('cart.checkout'), ['class'=>'beta-btn primary']) !!}
+                        </div>
                     </div>
                 </div>
             </div>

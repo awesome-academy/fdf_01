@@ -1,11 +1,11 @@
 <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">>@lang('admin_page.dashboard')</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.html">Admin - Food & Drink</a>
+    <a class="navbar-brand" href="index.html">@lang('admin_page.title')</a>
 </div>
 
 <ul class="nav navbar-top-links navbar-right">
@@ -14,7 +14,7 @@
             {!! Form::select
                 (
                     'locale',
-                    ['en' => trans('home_page.lang.en'), 
+                    ['en' => trans('home_page.lang.en'),
                      'vi' => trans('home_page.lang.vi')],
                       Lang::locale() === 'vi' ? 'vi' : 'en' ,
                     ['onchange'=>'this.form.submit()',

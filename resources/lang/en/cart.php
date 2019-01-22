@@ -29,5 +29,6 @@ return [
     'tbank_inform2' => 'Account: 0123 456 789',
     'tbank_inform3' => 'Name: Ton That Nhat Quan',
     'tbank_inform4' => 'Vietcombank, DaNang',
+    'checkout_success' => 'Your order have submitted',
 
 ];

@@ -50,6 +50,8 @@ Route::namespace('FDFAdmin')->middleware('localization')->group(function()
 
         Route::resource('managing-product', 'ManagingProduct');
 
+        Route::resource('managing-order', 'ManagingOrder');
+
         Route::post('update-status',[
             'uses' => 'ManagingProduct@updateStatus',
         ]);

@@ -29,5 +29,6 @@ return [
     'tbank_inform2' => 'Số tài khoản: 0123 456 789',
     'tbank_inform3' => 'Chủ TK: Tôn Thất Nhật Quân',
     'tbank_inform4' => 'Ngân hàng VCB, chi nhánh Đà Nẵng',
+    'checkout_success' => 'Bạn đã đặt hàng thành công',
 
 ];
