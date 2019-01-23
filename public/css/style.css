@@ -32,3 +32,13 @@
 .order-head {
     padding: 0px 10px;
 }
+
+.bell-style {
+    margin-right: 70px;
+}
+
+#create-scroll {
+height:300px;
+width:100%;
+overflow:auto; 
+}

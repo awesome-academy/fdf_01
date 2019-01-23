@@ -10,6 +10,7 @@ use App\Models\Order;
 use App\Models\DetailOrder;
 use App\Models\User;
 use App\Notifications\ReceiveOrder;
+use Pusher\Pusher;
 use Cart;
 
 class ShoppingCart extends Controller
@@ -74,6 +75,23 @@ class ShoppingCart extends Controller
                 }
                 $notyAdmin = User::where('role', '=', config('setting.admin'))->get();
                 \Notification::send($notyAdmin, new ReceiveOrder());
+
+                $data['title'] = "Xin chào admin! ";
+                $data['content'] = "Bạn có đơn hàng từ khách";
+
+                $options = array(
+                    'cluster' => 'ap1',
+                    'encrypted' => true
+                );
+
+                $pusher = new Pusher(
+                    env('PUSHER_APP_KEY'),
+                    env('PUSHER_APP_SECRET'),
+                    env('PUSHER_APP_ID'),
+                    $options
+                );
+
+                $pusher->trigger('Notify', 'send-message', $data);
 
                 return redirect(route('cart.create'))->with('alert',trans('cart.checkout_success'));
             } catch (Exception $e) {
