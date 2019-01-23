@@ -50,5 +50,8 @@ return [
     'delete_fail' => 'Delete failed',
     'check' => 'Check order',
     'website' => 'See other product',
+    'youhave' => 'You have ',
+    'solve' => ' orders waiting for shipping',
+    'check_system' => 'Please check the system to excute orders!',       
     
 ];

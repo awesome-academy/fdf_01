@@ -49,5 +49,8 @@ return [
     'delete_fail' => 'Xóa thất bại',
     'check' => 'Kiểm tra đơn hàng',
     'website' => 'Xem sản phẩm khác',
-    
+    'youhave' => 'Bạn có ',
+    'solve' => ' đơn hàng đang chờ để vận chuyển',
+    'check_system' => 'Xin hãy kiểm tra hệ thống để thực hiện đơn hàng',
+
 ];
