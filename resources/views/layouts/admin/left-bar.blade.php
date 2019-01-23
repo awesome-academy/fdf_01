@@ -23,10 +23,10 @@
                 <a href="#"><i class="fa fa-cube fa-fw"></i> @lang('admin_page.managing_order')<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">@lang('admin_page.notprocess_order')</a>
+                        <a href="{{ route('managing-order.index') }}">@lang('admin_page.notprocess_order')</a>
                     </li>
                     <li>
-                        <a href="#">@lang('admin_page.process_order')</a>
+                        <a href="{{ route('managing-order.create') }}">@lang('admin_page.process_order')</a>
                     </li>
                 </ul>
             </li>

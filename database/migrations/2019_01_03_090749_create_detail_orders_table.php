@@ -18,6 +18,7 @@ class CreateDetailOrdersTable extends Migration
             $table->integer('order_id')->unsigned();
             $table->integer('product_id')->unsigned();
             $table->integer('amount');
+            $table->double('price');
             $table->timestamps();
         });
     }
