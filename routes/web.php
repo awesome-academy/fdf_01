@@ -52,6 +52,16 @@ Route::namespace('FDFAdmin')->middleware('localization')->group(function()
 
         Route::resource('managing-order', 'ManagingOrder');
 
+        Route::get('/chart-year', [
+            'as' => 'chartYear',
+            'uses' => 'OrderChart@orderByYear',
+        ]);
+
+        Route::get('/order-day', [
+            'as' => 'orderDay',
+            'uses' => 'OrderChart@orderByDay',
+        ]);
+
         Route::post('update-status',[
             'uses' => 'ManagingProduct@updateStatus',
         ]);
