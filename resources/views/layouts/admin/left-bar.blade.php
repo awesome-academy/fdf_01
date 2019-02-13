@@ -55,6 +55,18 @@
                 </ul>
             </li>
 
+            <li>
+                <a href="#"><i class="fa fa-users fa-fw"></i> @lang('chart.title') <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{{ route('chartYear') }}">@lang('chart.chart_year')</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('orderDay') }}">@lang('chart.daily_order')</a>
+                    </li>
+                </ul>
+            </li>
+
         </ul>
     </div>
 </div>
