@@ -48,9 +48,9 @@
                 <div class="beta-comp">
                     <div class="cart">
                         @if (Cart::count() != 0)
-                            <div class="beta-select"><i class="fa fa-shopping-cart"></i> @lang('home_page.cart') ({{ Cart::count() }}) <i class="fa fa-chevron-down"></i></div>
+                            <div class="beta-select"><i class="fa fa-shopping-cart"></i> @lang('home_page.cart') <span class="jClickAjax">({{ Cart::count() }})</span> <i class="fa fa-chevron-down"></i></div>
                         @else
-                            <div class="beta-select"><i class="fa fa-shopping-cart"></i> @lang('home_page.cart') (@lang('home_page.empty')) <i class="fa fa-chevron-down"></i></div>
+                            <div class="beta-select"><i class="fa fa-shopping-cart"></i> @lang('home_page.cart') <span class="jClickAjax">(@lang('home_page.empty'))</span> <i class="fa fa-chevron-down"></i></div>
                         @endif
                         <div class="beta-dropdown cart-body">
                             @foreach(Cart::content() as $item)
@@ -66,7 +66,7 @@
                             </div>
                             @endforeach
                             <div class="cart-caption">
-                                <div class="cart-total text-right">@lang('cart.subtotal') <span class="cart-total-value">{{ Cart::subtotal() }}</span></div>
+                                <div class="cart-total text-right">@lang('cart.subtotal') <span class="cart-total-value subtotalAjax">{{ Cart::subtotal() }}</span></div>
                                 <div class="clearfix"></div>
 
                                 <div class="center">

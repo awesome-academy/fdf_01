@@ -47,7 +47,7 @@
                                 <div class="col-sm-3">
                                 <div class="single-item">
                                     <div class="single-item-header">
-                                        <a href="{!! route('product-detail.show',$dr->id) !!}"><img src="/images/product/avatar/{!! $dr->avatar  !!}" class="img-product"></a>
+                                        <a href="{!! route('product-detail.show', $dr->id) !!}"><img src="/images/product/avatar/{!! $dr->avatar  !!}" class="img-product"></a>
                                     </div>
                                     <div class="single-item-body">
                                         <p class="single-item-title">{!! $dr->name !!}</p>
@@ -56,14 +56,17 @@
                                         </p>
                                     </div>
                                     <div class="single-item-caption">
+                                        <a href="javascript:void(0)" class="add-to-cart pull-left" onclick="return ajaxClickToCart({{ $dr->id }})"><i class="fa fa-shopping-cart"></i></a>
+                                        <a class="beta-btn primary" href="product.html">@lang('home_page.detail') <i class="fa fa-chevron-right"></i></a>
+                                        <div class="clearfix"></div>
+                                    </div>
+{{--                                     <div class="single-item-caption">
                                         {!! Form::open(['method'=>'PUT', 'route'=>['cart.update', $dr->id]]) !!}
-                                            {!! Form::hidden('product_id', $dr->id) !!}
-                                            {!! Form::hidden('_token', csrf_token()) !!}
-                                            {{ Form::button('<i class="fa fa-shopping-cart"></i>', ['type' => 'submit', 'class' => 'add-to-cart pull-left'] )  }}
+                                            {{ Form::button('<i class="fa fa-shopping-cart"></i>', ['type' => 'submit', 'class' => 'add-to-cart pull-left', 'onclick' => 'return ajaxClickToCart()'] )  }}
                                             <a class="beta-btn primary" href="product.html">@lang('home_page.detail') <i class="fa fa-chevron-right"></i></a>
                                         {!! Form::close() !!}
                                         <div class="clearfix"></div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             @endforeach
