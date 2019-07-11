@@ -129,8 +129,9 @@ class ShoppingCart extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request)
+    {   
+        $id = $request->id;
         $product = Product::find($id);
 
         if ($product != null)
@@ -142,12 +143,13 @@ class ShoppingCart extends Controller
                 'qty' => config('setting.quantity'),
             ];
             Cart::add($cartInfo);
-        } else {
-            
-            return redirect()->back()->with('alert', trans('home_page.fail'));
+
         }
-        
-        return redirect()->back();
+        $countCart = Cart::count();
+        $contentCart = Cart::content();
+        $subtotal = Cart::subtotal();
+
+        return view('fdfuser.index.ajaxCart', compact('countCart', 'contentCart', 'subtotal'));
     }
 
     /**

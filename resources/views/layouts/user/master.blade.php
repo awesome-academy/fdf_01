@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>@lang('home_page.title') </title>
     <link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -42,6 +43,7 @@
     {{ Html::script(asset('/source/assets/dest/js/wow.min.js')) }}
     {{ Html::script(asset('/source/assets/dest/js/custom2.js')) }}
     {{ Html::script(asset('/source/assets/dest/js/jqueryfooter.js')) }}
+    {{ Html::script(asset('/js/ajax/ajaxClickCart.js')) }}
 
 </body>
 </html>
